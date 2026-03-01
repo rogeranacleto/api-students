@@ -4,6 +4,7 @@ export default function httpResponse(res, statusCode, data) {
         201: 'Registro cadastrado com sucesso',
         404: 'Registro não encontrado',
         400: 'Requisição inválida. Verifique os parametros e tente novamente',
+        409: 'Registro duplicado.',
         500: 'Ops! Ocorreu um erro inesperado no servidor.'
     }
 
