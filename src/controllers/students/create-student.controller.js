@@ -2,9 +2,8 @@ import { readDb, writeDb } from "../../database/db.js"
 import httpResponse from "../../utils/http-response.js";
 export default async function createStudent(req, res){
     try{    
-        const { students } = readDb();
+        const { students } = await readDb();
         const { name, email, birthDate } = req.body;
-
         if (students.some((student) => student.email === email)) {
           return httpResponse(res, 409);
         }
